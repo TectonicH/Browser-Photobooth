@@ -1,0 +1,83 @@
+/*
+* FILE : style.css
+* PROJECT : SENG3040 - Final Project
+* PROGRAMMER : Kristian Biviens
+* FIRST VERSION : 2023-12-06
+* DESCRIPTION : This file sets up the html styles for the photobooth app
+*/
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  font-size: 15px; 
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+#app {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  width: 100%;
+  max-width: 1280px; 
+  box-sizing: border-box;
+}
+
+#video-container {
+  flex-grow: 1; 
+  position: relative; 
+  height: 480px; 
+}
+
+#video {
+  display: none; 
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px; 
+  height: 480px; 
+  object-fit: cover; 
+}
+
+#toolbar {
+  width: 200px; 
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #e0e0e0;
+  margin-left: 20px; 
+  box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  overflow-y: auto; 
+}
+
+#stamps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 20px; 
+}
+
+.stamp {
+  width: 100%; 
+  cursor: pointer;
+  object-fit: contain; 
+}
+
+.stamp:hover {
+  transform: scale(1.1); 
+}
+
+button {
+  margin: 0 10px 10px 0; 
+}
+
+
+

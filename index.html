@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photobooth App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Toolbar Section -->
+        <div id="toolbar">
+            <!-- Stamps Section -->
+            <div id="stamps">
+                <img src="assets/axolotl.png" onclick="selectStamp('axolotl')" class="stamp">
+                <img src="assets/corgi.png" onclick="selectStamp('corgi')" class="stamp">
+                <img src="assets/hearts.png" onclick="selectStamp('hearts')" class="stamp">
+                <img src="assets/bubbleT.png" onclick="selectStamp('bubbleT')" class="stamp">
+            </div>
+            <!-- Drawing Tools -->
+     
+            <button onclick="selectTool('rect')">Draw Rectangle</button>
+            <button onclick="selectTool('ellipse')">Draw Ellipse</button>
+            <button id="resetButton">Reset Everything</button>
+            <!-- Color and Border Thickness Selection -->
+            <div>
+                Shape Fill Colour: <input type="color" id="fillColor" value="#FFFFFF">
+                Shape Border Colour: <input type="color" id="borderColor" value="#000000">
+                Shape Border Thickness:
+                <select id="borderThickness">
+                    <option value="0">None</option>
+                    <option value="1" selected>Thin</option>
+                    <option value="3">Medium</option>
+                    <option value="5">Thick</option>
+                </select>
+            </div>
+            <!-- Filter Selection -->
+            <div id="filter-container">
+                <label for="filters">Choose a filter:</label>
+            <select id="filters">
+              <option value="none">None</option>
+              <option value="invert">Invert</option>
+              <option value="gray">Grayscale</option>
+              <option value="blur">Blur</option>
+              <option value="posterize">Posterize</option>
+          </select>
+        </div>
+        </div>
+
+        <!-- Video and Canvas Container -->
+        <div id="video-container">
+            <video id="video" width="640" height="480" autoplay></video>
+            <canvas id="canvas" width="640" height="480"></canvas>
+        </div>
+    </div>
+    <script src="sketch.js"></script>
+</body>
+</html>
