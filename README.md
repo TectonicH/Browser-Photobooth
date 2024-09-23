@@ -18,7 +18,7 @@ This browser app will use your webcam and save photos. You can use the available
 
 Contributors names and contact info
 
-ex. Kristian Biviens  
+Kristian Biviens  
 
 
 ## Version History
